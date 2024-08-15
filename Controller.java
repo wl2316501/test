@@ -1,5 +1,5 @@
     @PostMapping("/importexcel")
-    @Operation(summary = "导入传播连战 Excel")
+    @Operation(summary = "导入Excel")
     @MediumOperationLog(operationType = OperationType.IMPORT, serviceClass = ActivitySpreadService.class, businessType = BusinessType.ACTIVITY_SPREAD, name ={"libraryName","projectId"})
     public CommonResult importexcel(@RequestParam(value = "file") MultipartFile file) throws Exception {
         return importexcel(file);
